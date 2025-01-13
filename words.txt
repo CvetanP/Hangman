@@ -1,0 +1,15 @@
+elephant|A large mammal with a trunk|easy
+pizza|A popular Italian dish|easy
+ball|A round object used in games and sports|easy
+book|A set of written or printed pages|easy
+house|A building for people to live in|easy
+bridge|A structure built to span a physical obstacle|medium
+volcano|A rupture in the Earth's crust that allows molten lava to escape|medium
+butterfly|A flying insect with colorful wings|medium
+beach|Sandy shore by the sea|medium
+guitar|A musical instrument with strings|medium
+psychology|The study of the mind|hard
+pneumonia|A lung infection|hard
+chiropractor|A healthcare professional specializing in diagnosing and treating musculoskeletal disorders|hard
+photosynthesis|The process by which plants make their food using sunlight|hard
+astronomy|The study of celestial objects and the universe|hard
