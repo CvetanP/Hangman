@@ -81,13 +81,19 @@ int main()
         }
 
         // Select a random word from the filtered list
-        int wordIndex = rand() % 5;
+        int wordIndex = rand() % filteredCount;
 
         const char *secretWord = filteredList[wordIndex].word;
         const char *hint = filteredList[wordIndex].hint;
 
         int wordLength = strlen(secretWord);
         char guessedWord[MAX_WORD_LENGTH] = {0};
+
+        for (int i = 0; i < wordLength; i++)
+        {
+            guessedWord[i] = '_'; // Fill with underscores
+        }
+        guessedWord[wordLength] = '\0'; // Null-terminate the string
         bool guessedLetters[26] = {false};
 
         printf("Welcome to Hangman!\n");
