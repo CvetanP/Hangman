@@ -112,7 +112,14 @@ int main()
             scanf(" %c", &guess);
             guess = tolower(guess);
 
-            if (guessedLetters[guess - 'a']) // $1 optimization for guessedLetter
+            // Validate if the input is a valid letter
+            if (guess < 'a' || guess > 'z')
+            {
+                printf("Invalid input. Please enter a letter from 'a' to 'z'.\n");
+                continue; // Skip the rest of the loop and ask for input again
+            }
+
+            if (guessedLetters[guess - 'a']) // Check if the letter has already been guessed
             {
                 printf("You've already guessed that letter. Try again.\n");
                 continue;
@@ -151,6 +158,7 @@ int main()
         if (!wordGuessed)
         {
             printf("\nSorry, you've run out of tries. The word was: %s\n", secretWord);
+            break;
         }
 
         // Calculate score using the new function
@@ -259,6 +267,13 @@ bool playAgain()
     char response;
     printf("Do you want to play again? (y/n): ");
     scanf(" %c", &response);
+
+    // Ensure the response is 'y' or 'n'
+    if (tolower(response) != 'y' && tolower(response) != 'n')
+    {
+        printf("Invalid input. Please enter 'y' for Yes or 'n' for No.\n");
+        return playAgain(); // Recursively ask until valid input is received
+    }
 
     return (tolower(response) == 'y');
 }
